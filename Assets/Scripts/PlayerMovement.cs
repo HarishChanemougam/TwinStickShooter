@@ -11,15 +11,13 @@ public class PlayerMovement : MonoBehaviour
     private Vector3 _moveVelocity;
     private Camera _mainCamera;
 
-    
-    void Start()
+    private void Start()
     {
         _rb = GetComponent<Rigidbody>();
         _mainCamera = FindObjectOfType<Camera>();
     }
 
-    
-    void Update()
+    private void Update()
     {
         _moveInput = new Vector3(Input.GetAxisRaw("Horizontal"), 0f, Input.GetAxisRaw("Vertical"));
         _moveVelocity = _moveInput * _moveSpeed;
