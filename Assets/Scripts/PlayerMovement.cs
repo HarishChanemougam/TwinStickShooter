@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] float _moveSpeed;
+    [SerializeField] Gun _gun;
     private Rigidbody _rb;
     private Vector3 _moveInput;
     private Vector3 _moveVelocity;
@@ -33,6 +34,16 @@ public class PlayerMovement : MonoBehaviour
             Debug.DrawLine(cameraRay.origin, pointToLook, Color.blue);
 
             transform.LookAt(new Vector3 (pointToLook.x,transform.position.y,pointToLook.z));
+        }
+
+        if(Input.GetMouseButtonDown(0))
+        {
+            _gun.isFiring = true;
+        }
+
+        if(Input.GetMouseButtonUp(0))
+        {
+            _gun.isFiring = false;
         }
     }
 
