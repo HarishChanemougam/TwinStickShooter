@@ -256,6 +256,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8072362908298224583, guid: 533e39b50f8a971449dc6d8c7cb2ba2e, type: 3}
   m_PrefabInstance: {fileID: 3614034709986527274}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &403926407 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 307804087710221049, guid: 533e39b50f8a971449dc6d8c7cb2ba2e, type: 3}
+  m_PrefabInstance: {fileID: 3614034709986527274}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85909114b69fc4b4bad5eb2b8de6962f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &411031007
 GameObject:
   m_ObjectHideFlags: 0
@@ -368,7 +379,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _IsFiring: 0
-  _bullet: {fileID: 0}
+  _bullet: {fileID: 403926407}
   _bulletSpeed: 5
   _timeBetweenShots: 0.1
   _firePoint: {fileID: 375415333}
@@ -386,9 +397,10 @@ GameObject:
   - component: {fileID: 502073114}
   - component: {fileID: 502073113}
   - component: {fileID: 502073112}
+  - component: {fileID: 502073117}
   m_Layer: 0
   m_Name: Enemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -406,6 +418,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1115504365}
+  - {fileID: 1055044511}
   m_Father: {fileID: 1173720501}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -503,6 +516,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 502073110}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &502073117
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 502073110}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8eaafeb9b2883f6419ede851628e64b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _health: 20
 --- !u!1 &581989655
 GameObject:
   m_ObjectHideFlags: 0
@@ -627,6 +653,37 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1055044510
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1055044511}
+  m_Layer: 0
+  m_Name: EnmeyRespawn
+  m_TagString: Untagged
+  m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1055044511
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1055044510}
+  m_LocalRotation: {x: -0, y: 0.0039515304, z: -0, w: -0.99999225}
+  m_LocalPosition: {x: -0.040000055, y: 0.39100003, z: 0.6140009}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 502073111}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: -360.453, z: 0}
 --- !u!1 &1115504364
 GameObject:
   m_ObjectHideFlags: 0
